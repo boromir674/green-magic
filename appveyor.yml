@@ -66,6 +66,8 @@ install:
   - '%PYTHON_HOME%\Scripts\tox --version'
   - '%PYTHON_HOME%\python --version'
   - ./.appveyor/install-anaconda.cmd
+  - conda update -n base -c defaults conda
+  - conda config --add channels conda-forge
   
 test_script:
   - '%PYTHON_HOME%\Scripts\tox --version'
