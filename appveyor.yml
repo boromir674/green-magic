@@ -65,6 +65,7 @@ install:
   - '%PYTHON_HOME%\Scripts\pip --version'
   - '%PYTHON_HOME%\Scripts\tox --version'
   - '%PYTHON_HOME%\python --version'
+  # TODO: build and install somoclu manually, since conda-forge does not have it for windows
   - ./.appveyor/install-anaconda.cmd
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
