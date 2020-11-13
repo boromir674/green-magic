@@ -65,6 +65,7 @@ install:
   - '%PYTHON_HOME%\Scripts\pip --version'
   - '%PYTHON_HOME%\Scripts\tox --version'
   - '%PYTHON_HOME%\python --version'
+  - ./.appveyor/install-anaconda.cmd
   
 test_script:
   - '%PYTHON_HOME%\Scripts\tox --version'
