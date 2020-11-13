@@ -69,10 +69,9 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
+  - conda config -q --add channels conda-forge
+  #  - conda update -n base -c defaults conda
 
-#  - conda update -n base -c defaults conda
-#  - conda config --add channels conda-forge
-  
 test_script:
   - '%PYTHON_HOME%\Scripts\tox --version'
   - '%WITH_COMPILER% %PYTHON_HOME%\Scripts\tox -vv'
