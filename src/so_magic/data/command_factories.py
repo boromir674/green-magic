@@ -25,7 +25,7 @@ class MyDecorator(type):
 
 
 class CommandRegistrator(MyDecorator):
-    """Classes can use this class as metaclass to obtain a single registration point accessible as class attribute
+    """Classes can use this class as metaclass to obtain a single registration point accessible as class attribute.
     """
     def __new__(mcs, *args, **kwargs):
         class_object = super().__new__(mcs, *args, **kwargs)
@@ -111,19 +111,7 @@ class CommandFactory:
 
     @classmethod
     def create(cls, *args, **kwargs) -> Command:
-        """Create a new instance of a Command object.
 
-        The input arguments can be in two formats:
-
-        1. create(an_object, method, *arguments)
-        In this case the command is of the form an_object.method(*arguments)
-
-        2. create(a_function, *arguments)
-        In this case the command is of the form a_function(*arguments)
-
-        Returns:
-            Command: an instance of a command object
-        """
         key, name = cls.pick(*args, **kwargs)
         if len(args) < 1:
             raise RuntimeError(args)

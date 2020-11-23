@@ -1,4 +1,4 @@
-from abc import ABC
+ from abc import ABC
 
 __all__ = ['ObjectRegistry', 'ObjectRegistryError']
 

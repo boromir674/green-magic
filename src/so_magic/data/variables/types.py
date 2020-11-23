@@ -46,12 +46,12 @@ class NumericalVariableType(VariableType, ABC):
 
 @VariableType.register_as_subclass('interval')
 class IntervalVariableType(NumericalVariableType):
-    """Interval variable; numerical variable where differences are interpretable; supported operations: [+, -]; no true zero; eg temperature in centigrade (ie Celsius)"""
+    """Interval variable; numerical variable where differences are interpretable; supported operations: [+, -]; no true zero; eg temperature in centigrade (ie Celsius)."""
     pass
 
 @VariableType.register_as_subclass('ratio')
 class RatioVariableType(NumericalVariableType):
-    """Ratio variable; numerical variable where all operations are supported (+, -, *, /) and true zero is defined; eg weight"""
+    """Ratio variable; numerical variable where all operations are supported (+, -, \*, /) and true zero is defined; eg weight."""
     pass
 
 
